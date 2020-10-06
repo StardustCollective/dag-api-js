@@ -1,0 +1,6 @@
+
+# dist
+module/
+
+# dependencies
+node_modules/
