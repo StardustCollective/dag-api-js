@@ -2,14 +2,24 @@
   "name": "@stardust-collective/dag-api",
   "version": "1.0.5",
   "description": "JavaScript API for connecting to a Constellation Network.",
+  "module": "./esm5/index.js",
+  "es2015": "./esm2015/index.js",
+  "typings": "./types/index.d.ts",
   "scripts": {
-    "build2": "tsc",
-    "build": "tsc && tsc -p tsconfig.node.json",
-    "node": "tsc -p tsconfig.node.json",
-    "test": "mocha -r ts-node/register test/unit/**/key*test.ts",
-    "pub": "npm publish --access public",
-    "pub-dry-run": "npm publish --dry-run"
-  },
+    "cleanup": "rimraf dist/",
+    "prebuild": "npm run cleanup",
+    "build": "tsc && tsc --target es2018 --outDir dist/esm2015",
+    "postbuild": "node scripts/copy",
+    "prerelease": "npm run build",
+    "release": "standard-version",
+    "postrelease2": "node scripts/copy && node scripts/build",
+    "postrelease": "node scripts/copy && node scripts/build && npm run release:github && npm run release:npm",
+    "release:github": "git push --no-verify --follow-tags origin master",
+    "release:npm": "npm publish dist",
+    "release:preflight": "npm pack ./dist --dry-run",
+    "test": "TS_NODE_PROJECT='./tsconfig.node.json' mocha -r ts-node/register test/unit/**/key*test.ts"
+  }
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StardustCollective/dag-api-js.git"

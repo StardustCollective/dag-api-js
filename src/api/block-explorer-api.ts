@@ -2,7 +2,7 @@ import {RestApi} from '../cross-platform/api/rest.api';
 import {Block, Snapshot, Transaction} from '../data/types';
 import {DagApiConstants} from '../dag-api-constants';
 
-class BlockExplorerApi {
+export class BlockExplorerApi {
   private service = new RestApi(DagApiConstants.BLOCK_EXPLORER_URL);
 
   config () {

@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
     "declaration": true,
+    "declarationMap": true,
     "strict": false,
-    "target": "es6",
-    "lib": [ "es2015"],
-    "outDir": "es6"
+    "target": "es5",
+    "lib": [ "es2018", "dom" ],
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "stripInternal": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist/esm5",
+    "resolveJsonModule": true
   },
   "compileOnSave": true,
   "include": [

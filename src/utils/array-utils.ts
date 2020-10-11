@@ -1,4 +1,4 @@
-class ArrayUtils {
+export class ArrayUtils {
 
   FLAGS = {
     CASE_INSENSITIVE: { caseInsensitive: true },

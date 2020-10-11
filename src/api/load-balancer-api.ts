@@ -5,7 +5,7 @@ import {PeerMetrics} from '../data/peer-metrics';
 import {PeerMetricsResponse} from './peer-node-api';
 import {DagApiConstants} from '../dag-api-constants';
 
-class LoadBalancerApi {
+export class LoadBalancerApi {
 
   private service = new RestApi(DagApiConstants.LOAD_BALANCER_URL);
 
