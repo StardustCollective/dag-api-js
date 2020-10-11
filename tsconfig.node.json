@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "module": "es6",
-    "moduleResolution": "node",
+    "module": "commonjs",
     "declaration": true,
     "strict": false,
-    "target": "es6",
-    "lib": [ "es2015"],
-    "outDir": "es6"
+    "target": "es5",
+    "lib": [ "es2015" ],
+    "outDir": "node"
   },
   "compileOnSave": true,
   "include": [

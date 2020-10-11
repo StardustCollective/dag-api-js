@@ -5,7 +5,7 @@ class ArrayUtils {
     NUMERIC: { 'numeric': true }
   }
 
-  sortBy<T>(arr: T[], fieldName?, flags?: Flags, sortProcessCall?): T[] {
+  sortBy<T>(arr: T[], fieldName?: string, flags?: Flags, sortProcessCall?): T[] {
     if (!flags) {
       flags = new Flags();
     }
@@ -52,11 +52,11 @@ class ArrayUtils {
     });
   }
 
-  findItemByFieldValue (arr, fieldName, fieldValue, defaultValue?) {
+  findItemByFieldValue<T> (arr: T[], fieldName: string, fieldValue: any, defaultValue?: T) {
 
     let result = defaultValue;
 
-    arr.some(item => {
+    arr && arr.some(item => {
       if (item.hasOwnProperty(fieldName) && item[fieldName] === fieldValue) {
 
         result = item;
@@ -68,11 +68,11 @@ class ArrayUtils {
     return result;
   }
 
-  findIndexByFieldValue (arr, fieldName, fieldValue, defaultValue?) {
+  findIndexByFieldValue<T> (arr: T[], fieldName: string, fieldValue: any) {
 
-    let result = defaultValue;
+    let result = -1;
 
-    arr.some((item, index) => {
+    arr && arr.some((item, index) => {
       if (item.hasOwnProperty(fieldName) && item[fieldName] === fieldValue) {
 
         result = index;

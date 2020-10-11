@@ -1,5 +1,5 @@
 import {RestApi} from '../cross-platform/api/rest.api';
-import {AddressBalance, AddressLastAcceptedTransaction, ClusterInfo} from '../data/types';
+import {AddressBalance, AddressLastAcceptedTransaction, ClusterInfo, Transaction} from '../data/types';
 import {ClusterPeerInfo} from '../data/cluster-peer-info';
 import {PeerMetrics} from '../data/peer-metrics';
 import {PeerMetricsResponse} from './peer-node-api';
@@ -30,7 +30,11 @@ class LoadBalancerApi {
   }
 
   async postTransaction (tx: any) {
-    return this.service.$post('/transaction', tx);
+    return this.service.$post<string>('/transaction', tx);
+  }
+
+  async checkTransaction (hash: string) {
+    return this.service.$get<Transaction>('/transaction/' + hash);
   }
 
   async getClusterInfo (): Promise<ClusterPeerInfo[]> {

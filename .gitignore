@@ -1,6 +1,7 @@
 
 # dist
-module/
+es6/
+node/
 
 # dependencies
 node_modules/

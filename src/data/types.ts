@@ -41,6 +41,7 @@ export type Transaction = {
   sender : string;
   fee : number;
   isDummy : true;
+  timeAgo?: string;
   timestamp: string;
   lastTransactionRef : {
     prevHash : string;
