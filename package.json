@@ -1,6 +1,6 @@
 {
   "name": "@stardust-collective/dag-api",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "JavaScript API for connecting to a Constellation Network.",
   "module": "./esm5/index.js",
   "es2015": "./esm2015/index.js",
