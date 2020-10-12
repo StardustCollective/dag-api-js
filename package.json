@@ -1,6 +1,6 @@
 {
   "name": "@stardust-collective/dag-api",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "JavaScript API for connecting to a Constellation Network.",
   "module": "./esm5/index.js",
   "es2015": "./esm2015/index.js",
@@ -18,8 +18,7 @@
     "release:npm": "npm publish dist",
     "release:preflight": "npm pack ./dist --dry-run",
     "test": "TS_NODE_PROJECT='./tsconfig.node.json' mocha -r ts-node/register test/unit/**/key*test.ts"
-  }
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StardustCollective/dag-api-js.git"
