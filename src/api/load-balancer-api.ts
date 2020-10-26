@@ -1,7 +1,7 @@
 import {RestApi} from '../cross-platform/api/rest.api';
-import {AddressBalance, AddressLastAcceptedTransaction, ClusterInfo, Transaction} from '../data/types';
-import {ClusterPeerInfo} from '../data/cluster-peer-info';
-import {PeerMetrics} from '../data/peer-metrics';
+import {AddressBalance, AddressLastAcceptedTransaction, ClusterInfo, Transaction} from '../dto/types';
+import {ClusterPeerInfo} from '../dto/cluster-peer-info';
+import {PeerMetrics} from '../dto/peer-metrics';
 import {PeerMetricsResponse} from './peer-node-api';
 import {DagApiConstants} from '../dag-api-constants';
 

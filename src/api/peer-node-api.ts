@@ -1,7 +1,7 @@
 
-import {PeerMetricsRawData, PeerMetrics} from '../data/peer-metrics';
-import {ClusterInfo} from '../data/types';
-import {ClusterPeerInfo} from '../data/cluster-peer-info';
+import {PeerMetricsRawData, PeerMetrics} from '../dto/peer-metrics';
+import {ClusterInfo} from '../dto/types';
+import {ClusterPeerInfo} from '../dto/cluster-peer-info';
 import {RestApi} from '../cross-platform/api/rest.api';
 
 class PeerNodeApi {
