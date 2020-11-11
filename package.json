@@ -2,8 +2,8 @@
   "name": "@stardust-collective/dag-api",
   "version": "1.0.9",
   "description": "JavaScript API for connecting to a Constellation Network.",
-  "module": "./esm5/index.js",
-  "es2015": "./esm2015/index.js",
+  "esm5": "./esm5/index.js",
+  "module": "./esm2015/index.js",
   "typings": "./types/index.d.ts",
   "scripts": {
     "cleanup": "rimraf dist/",

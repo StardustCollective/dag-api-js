@@ -68,14 +68,14 @@ export class RestApiOptions {
   headers?: any;
   noAuthHeader?: boolean;
   transformResponse?: (rawResponse) => any;
-  retry: number;
+  retry?: number;
 }
 
 export class RestApiOptionsRequest extends RestApiOptions {
   errorHook?: (error) => void;
   queryParams?: any;
+  authToken?: string;
   method: string;
-  authToken: string;
   body: any;
   url: string;
 }
