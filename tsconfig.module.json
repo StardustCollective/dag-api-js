@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "esNext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "strict": false,
+    "target": "esNext",
+    "lib": [ "esNext" ],
+    "outDir": "dist/module"
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ]
+}

@@ -5,7 +5,7 @@
     "strict": false,
     "target": "es6",
     "lib": [ "es2015" ],
-    "outDir": "node"
+    "outDir": "dist/cjs"
   },
   "compileOnSave": true,
   "include": [
